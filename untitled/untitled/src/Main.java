@@ -159,15 +159,7 @@ import java.util.Scanner;
             q11.opcaoB = "B) Um castelo";
             q11.opcaoC = "C) Um novo traje";
             q11.opcaoD = "D) A liberdade";
-            q11.opcaoE = "E) Riquezas";
-            q11.correta = "A";
-
-            //PROXIMA QUESTAO
-
-            Questao q12 = new Questao();
-            q12.pergunta = "";
-            q12.opcaoA = "";
-            q12.opcaoB = "";
+            q11.opcaoE = "";
 
 
 
