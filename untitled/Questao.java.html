@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Questao.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Questao.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Questao {</span>
+    <span class="s1">String pergunta = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+    <span class="s1">String opcaoA = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+    <span class="s1">String opcaoB = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+    <span class="s1">String opcaoC = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+    <span class="s1">String opcaoD = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+    <span class="s1">String opcaoE = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+    <span class="s1">String correta = </span><span class="s2">&quot;&quot;</span><span class="s0">;</span>
+
+    <span class="s3">//jdjgkfdjk</span>
+    <span class="s0">public boolean </span><span class="s1">isCorreta(String resposta){</span>
+        <span class="s0">if</span><span class="s1">(resposta.equalsIgnoreCase(</span><span class="s0">this</span><span class="s1">.correta)){</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Parabéns resposta Correta! - Letra: &quot; </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.correta)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">return true;</span>
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Resposta Errada!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;A opção correta é a letra: &quot; </span><span class="s1">+ </span><span class="s0">this</span><span class="s1">.correta)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">return false;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public </span><span class="s1">String leiaResposta() {</span>
+        <span class="s1">Scanner ler = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">String resp</span><span class="s0">;</span>
+        <span class="s0">do </span><span class="s1">{</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Digite a resposta: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">resp = ler.next()</span><span class="s0">;</span>
+        <span class="s1">} </span><span class="s0">while </span><span class="s1">(!respostaValida(resp))</span><span class="s0">;</span>
+        <span class="s0">return </span><span class="s1">resp</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private boolean </span><span class="s1">respostaValida(String resp){</span>
+        <span class="s0">if</span><span class="s1">(resp.equalsIgnoreCase(</span><span class="s2">&quot;A&quot;</span><span class="s1">) || resp.equalsIgnoreCase(</span><span class="s2">&quot;B&quot;</span><span class="s1">) || resp.equalsIgnoreCase(</span><span class="s2">&quot;C&quot;</span><span class="s1">) ||</span>
+                <span class="s1">resp.equalsIgnoreCase(</span><span class="s2">&quot;D&quot;</span><span class="s1">) || resp.equalsIgnoreCase(</span><span class="s2">&quot;E&quot;</span><span class="s1">)){</span>
+            <span class="s0">return true;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Resposta inválida! Digite opção A, B, C, D ou E. &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">return false;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">escrevaQuestao(){</span>
+        <span class="s1">System.out.println(</span><span class="s0">this</span><span class="s1">.pergunta)</span><span class="s0">;</span>
+        <span class="s1">System.out.println()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s0">this</span><span class="s1">.opcaoA)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s0">this</span><span class="s1">.opcaoB)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s0">this</span><span class="s1">.opcaoC)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s0">this</span><span class="s1">.opcaoD)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s0">this</span><span class="s1">.opcaoE)</span><span class="s0">;</span>
+        <span class="s1">System.out.println()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
